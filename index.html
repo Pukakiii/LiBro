@@ -2,12 +2,58 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>libro.json</title>
+    <title>LiBro</title>
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div id="app">
+      <header>
+        <div>
+          <h1>LiBro</h1>
+          <p class="subtitle">Your library</p>
+        </div>
+        <img
+          id="logo"
+          src="simple-books-catalogue/assets/book.svg"
+          alt="Book Logo"
+        />
+      </header>
+      <div class="container">
+        <div class="search-section">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for a book title..."
+            class="search-input"
+          />
+          <button id="searchBtn" class="search-btn">Search</button>
+        </div>
+        <div class="content">
+          <div class="results-section">
+            <h2>Search Results</h2>
+            <div id="results" class="results-container">
+              <p class="empty-state">
+                Enter a book title and click search to begin
+              </p>
+            </div>
+            <div id="loading" class="loading" style="display: none">
+              <p>Searching Open Library...</p>
+            </div>
+          </div>
+
+          <aside class="favorites-section">
+            <h2>❤️ Favorites (<span id="favoriteCount">0</span>)</h2>
+            <div id="favorites" class="favorites-container">
+              <p class="empty-state">
+                No favorites yet. Add books to your collection!
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <script src="/src/main.js"></script>
   </body>
 </html>
