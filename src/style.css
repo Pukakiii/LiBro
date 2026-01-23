@@ -1,19 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap");
 
 :root {
-  font-family: Playfair, Display, serif;
-  line-height: 1.6;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: #333;
-  background-color: #f8f9fa;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
   --white: #ffffff;
   --green: #27694d;
   --yellow: #daa520;
@@ -36,48 +23,59 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-}
-
-#app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
 header {
-  background: var(--secondary);
-  color: white;
+  background: var(--yellow);
   text-align: center;
   backdrop-filter: blur(10px);
   display: flex;
-  padding: 0 1rem;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 2.5rem;
+  /* height: 2.5rem; */
+  padding: 0.15rem 0;
+  border-bottom: var(--brown) solid 0.15rem;
 }
-
+#logo-name-container {
+  display: flex;
+  flex-direction: column;
+}
 header h1 {
-  margin: 0;
   color: var(--title);
-  font-size: 2.5em;
-  margin-bottom: 0.5rem;
+  font-family: "Playfair Display", serif;
+  border: #1a1a1a solid 1px;
+  text-align: end;
+  margin: 0;
 }
-
+#logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: var(--title);
+  border-radius: 10px;
+}
 #logo {
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
 }
 
-.subtitle {
+header h2 {
   color: var(--text);
   margin: 0;
-  opacity: 0.9;
-  font-size: 1.1em;
+  font-size: 1rem;
+  font-family: "Source Sans 3", serif;
+  border: #1a1a1a solid 1px;
 }
 
-.container {
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--green);
+}
+
+main {
   flex: 1;
   max-width: 1400px;
   width: 100%;
@@ -88,13 +86,7 @@ header h1 {
   gap: 2rem;
 }
 
-.search-section {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.search-input {
+input {
   flex: 1;
   padding: 1rem;
   font-size: 1rem;
@@ -106,13 +98,12 @@ header h1 {
     box-shadow 0.2s;
 }
 
-.search-input:focus {
+input:focus {
   outline: none;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
-.search-btn {
+#searchBtn {
   padding: 1rem 2rem;
   font-size: 1rem;
   font-weight: 600;
@@ -125,7 +116,7 @@ header h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.search-btn:hover {
+#searchBtn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   background: #f0f0f0;

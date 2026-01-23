@@ -7,28 +7,27 @@
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <div id="app">
       <header>
-        <div>
           <h1>LiBro</h1>
-          <p class="subtitle">Your library</p>
-        </div>
-        <img
-          id="logo"
-          src="simple-books-catalogue/assets/book.svg"
-          alt="Book Logo"
-        />
-      </header>
-      <div class="container">
-        <div class="search-section">
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Search for a book title..."
-            class="search-input"
+        <div id="logo-container">
+          <img
+            id="logo"
+            src="simple-books-catalogue/assets/book.svg"
+            alt="Book Logo"
           />
-          <button id="searchBtn" class="search-btn">Search</button>
         </div>
+        <h2>Your library</h2>
+      </header>
+      <main>
+        <form >
+          <input
+            required
+            type="text"
+            placeholder="Search for a book title..."
+            name="book"
+            />
+          <button type="submit" id="searchBtn">Search</button>
+        </form>
         <div class="content">
           <div class="results-section">
             <h2>Search Results</h2>
@@ -51,9 +50,7 @@
             </div>
           </aside>
         </div>
-      </div>
-    </div>
-
+      </main>
     <script src="/src/main.js"></script>
   </body>
 </html>

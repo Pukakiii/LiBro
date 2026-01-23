@@ -1,10 +1,4 @@
-// Open Library API Base URL
-const API_BASE_URL = "https://openlibrary.org";
-const STORAGE_KEY = "libroFavorites";
-
 // DOM Elements
-const searchInput = document.getElementById("searchInput");
-const searchBtn = document.getElementById("searchBtn");
 const resultsContainer = document.getElementById("results");
 const favoritesContainer = document.getElementById("favorites");
 const favoriteCount = document.getElementById("favoriteCount");
@@ -15,9 +9,6 @@ let favorites = loadFavorites();
 
 // Event Listeners
 searchBtn.addEventListener("click", handleSearch);
-searchInput.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") handleSearch();
-});
 
 // Initialize favorites display
 renderFavorites();
@@ -27,12 +18,6 @@ renderFavorites();
  */
 async function handleSearch() {
   const query = searchInput.value.trim();
-
-  if (!query) {
-    resultsContainer.innerHTML =
-      '<p class="error">Please enter a book title</p>';
-    return;
-  }
 
   loadingDiv.style.display = "block";
   resultsContainer.innerHTML = "";
@@ -54,26 +39,6 @@ async function handleSearch() {
   } finally {
     loadingDiv.style.display = "none";
   }
-}
-
-/**
- * Search books from Open Library API
- */
-async function searchBooks(query) {
-  const url = `${API_BASE_URL}/search.json?title=${encodeURIComponent(query)}&limit=10`;
-
-  const response = await fetch(url);
-  if (!response.ok) throw new Error("Failed to fetch from Open Library");
-
-  const data = await response.json();
-  return data.docs.map((doc) => ({
-    key: doc.key,
-    title: doc.title,
-    author: doc.author_name?.[0] || "Unknown Author",
-    year: doc.first_publish_year || "N/A",
-    coverUrl: doc.cover_i ? `${API_BASE_URL}/b/id/${doc.cover_i}-M.jpg` : null,
-    description: doc.description || "No description available",
-  }));
 }
 
 /**
