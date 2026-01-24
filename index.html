@@ -7,50 +7,50 @@
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-      <header>
-          <h1>LiBro</h1>
-        <div id="logo-container">
-          <img
-            id="logo"
-            src="simple-books-catalogue/assets/book.svg"
-            alt="Book Logo"
-          />
-        </div>
-        <h2>Your library</h2>
-      </header>
-      <main>
-        <form >
-          <input
-            required
-            type="text"
-            placeholder="Search for a book title..."
-            name="book"
-            />
-          <button type="submit" id="searchBtn">Search</button>
-        </form>
-        <div class="content">
-          <div class="results-section">
-            <h2>Search Results</h2>
-            <div id="results" class="results-container">
-              <p class="empty-state">
-                Enter a book title and click search to begin
-              </p>
-            </div>
-            <div id="loading" class="loading" style="display: none">
-              <p>Searching Open Library...</p>
-            </div>
+    <header>
+      <h1>LiBro</h1>
+      <div id="logo-container">
+        <img
+          id="logo"
+          src="simple-books-catalogue/assets/book.svg"
+          alt="Book Logo"
+        />
+      </div>
+      <h2>Your library</h2>
+    </header>
+    <main>
+      <form>
+        <input
+          required
+          type="text"
+          placeholder="Search for a book title..."
+          name="book"
+        />
+        <button type="submit" id="searchBtn">Search</button>
+      </form>
+      <div class="content">
+        <section class="results-section">
+          <h2>Search Results</h2>
+          <div id="results" class="results-container">
+            <p class="empty-state">
+              Enter a book title and click search to begin
+            </p>
           </div>
+          <div id="loading" style="display: none">
+            <p class="loading-text">Searching<span class="dots"></span></p>
+          </div>
+        </section>
 
-          <aside class="favorites-section">
-            <h2>❤️ Favorites (<span id="favoriteCount">0</span>)</h2>
-            <div id="favorites" class="favorites-container">
-              <p class="empty-state">
-                No favorites yet. Add books to your collection!
-              </p>
-            </div>
-          </aside>
-        </div>
-      </main>
+        <aside class="favorites-section">
+          <h2>❤️ Favorites (<span id="favoriteCount">0</span>)</h2>
+          <div id="favorites" class="favorites-container">
+            <p class="empty-state">
+              No favorites yet. Add books to your collection!
+            </p>
+          </div>
+        </aside>
+      </div>
+    </main>
     <script src="/src/main.js"></script>
   </body>
 </html>

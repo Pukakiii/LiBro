@@ -11,6 +11,7 @@ async function searchBooks(query) {
   if (!response.ok) throw new Error("Failed to fetch from Open Library");
 
   const data = await response.json();
+  console.log(data);
   return data.docs.map((doc) => ({
     key: doc.key,
     title: doc.title,
