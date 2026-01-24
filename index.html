@@ -19,8 +19,9 @@
       <h2>Your library</h2>
     </header>
     <main>
-      <form>
+      <form id="search-form">
         <input
+          id="input"
           required
           type="text"
           placeholder="Search for a book title..."
@@ -29,21 +30,18 @@
         <button type="submit" id="searchBtn">Search</button>
       </form>
       <div class="content">
-        <section class="results-section">
+        <section id="results-section">
           <h2>Search Results</h2>
-          <div id="results" class="results-container">
+          <div id="results">
             <p class="empty-state">
               Enter a book title and click search to begin
             </p>
           </div>
-          <div id="loading" style="display: none">
-            <p class="loading-text">Searching<span class="dots"></span></p>
-          </div>
         </section>
 
         <aside class="favorites-section">
-          <h2>❤️ Favorites (<span id="favoriteCount">0</span>)</h2>
-          <div id="favorites" class="favorites-container">
+          <h2>❤️ Favorites <span id="favoriteCount">0</span></h2>
+          <div id="favorites">
             <p class="empty-state">
               No favorites yet. Add books to your collection!
             </p>
@@ -51,6 +49,6 @@
         </aside>
       </div>
     </main>
-    <script src="/src/main.js"></script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

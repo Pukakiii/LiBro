@@ -1,29 +1,24 @@
-import searchBooks from "./api.js";
-
+import { searchBooks } from "./api.js";
+import { loading } from "../utils.js";
+import { renderBookCards } from "./bookCards.js";
 // DOM form elements
-const searchInput = document.getElementsByTagName("searchInput");
-const form = document.getElementById("searchForm");
-const loadingDiv = document.getElementById("loading");
+const searchInput = document.getElementById("input");
+const resultsSection = document.getElementById("results-section");
 
 // Event Listener
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  handleSearch(event, searchInput);
-});
 
 // Handle search functionality
-async function handleSearch(event, query) {
+export async function handleSearch(event) {
   const query = searchInput.value.trim();
 
-  loadingDiv.style.display = "block";
+  // resultsSection.innerHTML = loading();
 
   try {
     const books = await searchBooks(query);
+    renderBookCards(books);
   } catch (error) {
     console.error("Error searching books:", error);
   } finally {
-    loadingDiv.style.display = "none";
+    // resultsSection.innerHTML = "";
   }
-  
 }

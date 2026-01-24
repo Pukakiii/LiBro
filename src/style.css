@@ -132,7 +132,7 @@ input:focus {
   gap: 2rem;
 }
 
-.results-section,
+#results-section,
 .favorites-section {
   background: white;
   border-radius: 12px;
@@ -140,7 +140,7 @@ input:focus {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.results-section h2,
+#results-section h2,
 .favorites-section h2 {
   margin-top: 0;
   color: #333;
@@ -149,7 +149,7 @@ input:focus {
   padding-bottom: 1rem;
 }
 
-.results-container {
+#results {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
