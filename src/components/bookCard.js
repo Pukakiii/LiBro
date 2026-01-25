@@ -1,10 +1,10 @@
-const results = document.getElementById("results");
-
+const bookSection = document.getElementById("book-list");
+  
 export function renderBookCards(books) {
-  results.innerHTML = "";
+  bookSection.innerHTML = "";
 
   books.forEach(book => {
-    results.appendChild(createBookCard(book));
+    bookSection.appendChild(createBookCard(book));
   });
 } 
 
@@ -15,7 +15,7 @@ function createBookCard(book) {
   const cover = book.coverUrl
     ? `<img src="${book.coverUrl}" alt="${book.title}" class="book-cover">`
     : `<div class="book-cover-placeholder">No Cover</div>`;
-
+  
   card.innerHTML = `
     ${cover}
     <div class="book-info">
@@ -27,5 +27,5 @@ function createBookCard(book) {
   `;
 
   return card;
-}
+} 
 

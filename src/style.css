@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap");
 
+@import "./styles/loading.css";  
+
 :root {
   --white: #ffffff;
   --green: #27694d;
@@ -149,7 +151,7 @@ input:focus {
   padding-bottom: 1rem;
 }
 
-#results {
+#book-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;

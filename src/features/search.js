@@ -1,24 +1,31 @@
 import { searchBooks } from "./api.js";
-import { loading } from "../utils.js";
-import { renderBookCards } from "./bookCards.js";
+import { renderBookCards } from "../components/bookCard.js";
+import { renderLoading } from "../utils.js";
+import { renderError } from "../utils.js";
+
 // DOM form elements
 const searchInput = document.getElementById("input");
-const resultsSection = document.getElementById("results-section");
+const bookSection = document.getElementById("book-list");
 
-// Event Listener
-
-// Handle search functionality
-export async function handleSearch(event) {
+// search handler
+export async function handleSearch() {
   const query = searchInput.value.trim();
 
-  // resultsSection.innerHTML = loading();
+  bookSection.innerHTML = renderLoading();
 
   try {
     const books = await searchBooks(query);
+
+    if (books.length === 0) {
+      bookSection.innerHTML = `
+        <p class="empty-state">No results found for "${query}". Please try another title.</p>
+      `;
+      return;
+    }
+
     renderBookCards(books);
   } catch (error) {
     console.error("Error searching books:", error);
-  } finally {
-    // resultsSection.innerHTML = "";
+    renderError(error.message);
   }
 }

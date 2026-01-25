@@ -2,11 +2,19 @@ import {handleSearch} from "./features/search.js";
 
 const form = document.getElementById("search-form");
 const searchInput = document.getElementById("input");
+const favContainer = document.getElementById("favorites");
+const favBtn = document.getElementById("fav-btn");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  handleSearch(event, searchInput);
+  handleSearch();
+});
+
+favBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  handleFavorites()
 });
 
 // Initialize favorites display
