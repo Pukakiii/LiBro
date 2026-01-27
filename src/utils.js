@@ -1,5 +1,10 @@
 const bookSection = document.getElementById("book-list");
 
+// heartIcon for book cards
+function heartIcon() {
+  return `<img src="../simple-books-catalogue/heart-icon.svg" alt="heart icon" class="heart-icon"/>`;
+}
+
 // loading animation component
 function renderLoading() {
   return `
@@ -30,4 +35,4 @@ function loadFavorites() {
   return stored ? JSON.parse(stored) : [];
 }
 
-export { renderLoading, renderError, saveFavorites, loadFavorites };
+export { renderLoading, renderError, saveFavorites, loadFavorites, heartIcon };

@@ -1,0 +1,19 @@
+/* State & Message Styles */
+
+.empty-state {
+  text-align: center;
+  padding: var(--gap-lg);
+  color: var(--text);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.error {
+  text-align: center;
+  padding: var(--gap-md);
+  background-color: #fef2f2;
+  border-left: 3px solid var(--red);
+  border-radius: var(--radius-md);
+  color: var(--red);
+  font-weight: 500;
+}

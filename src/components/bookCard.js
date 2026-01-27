@@ -1,16 +1,16 @@
-import { attachFavoriteToggleListeners } from "../features/favorites.js";
-
+import { heartIcon } from "../utils.js";
 const bookSection = document.getElementById("book-list");
 
+// rendering book cards
 export function renderBookCards(books) {
   bookSection.innerHTML = "";
 
   books.forEach((book) => {
     bookSection.appendChild(createBookCard(book));
   });
-  attachFavoriteToggleListeners();
 }
 
+// book card component
 function createBookCard(book) {
   const card = document.createElement("div");
   card.className = "book-card";
@@ -32,6 +32,7 @@ function createBookCard(book) {
         data-year="${book.year}"
         data-cover="${book.coverUrl || ''}">
         Add to favorites
+        ${heartIcon()}
       </button>
     </div>
   `;

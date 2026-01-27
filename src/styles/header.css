@@ -1,0 +1,38 @@
+/* Header Styles */
+
+header {
+  background-color: var(--yellow);
+  padding: 0.75rem 2.5rem;
+  border-bottom: 1px solid var(--brown);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-sm);
+}
+
+header h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--title);
+}
+
+header h2 {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+#logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--title);
+  border-radius: var(--radius-md);
+}
+
+#logo {
+  width: 2rem;
+  height: 2rem;
+}
