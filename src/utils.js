@@ -18,4 +18,16 @@ function renderError(message) {
   `;
 }
 
-export { renderLoading, renderError };
+const STORAGE_KEY = "favoriteBooks";
+// save favorites to localStorage
+function saveFavorites(favorites) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
+}
+
+// Load fav orites from localStorage
+function loadFavorites() {
+  const stored = localStorage.getItem(STORAGE_KEY);
+  return stored ? JSON.parse(stored) : [];
+}
+
+export { renderLoading, renderError, saveFavorites, loadFavorites };
