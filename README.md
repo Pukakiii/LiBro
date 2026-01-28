@@ -6,14 +6,7 @@ A lightweight **vanilla JavaScript** application built with **Vite** that allows
 
 ##  Task
 
-Create a simple book catalogue application using **vanilla JavaScript** and **Vite**.  
-The app should allow users to:
-- View a list of books
-- Search for books
-- Add and manage favorite books
-
-🔗 **Task description**:  
-[Link to the assignment document]
+https://drive.google.com/file/d/1swszcMU9rF_-zRJaA2VchPuU_d7yrAbs/view?pli=1
 
 ---
 
@@ -42,12 +35,12 @@ The app should allow users to:
    ```
 
 4. Run the app:
-   ```
+   ```bash
    npm run preview
    ```
 
 5. open in browser:
-   ```
+   ```bash
    http://localhost:5173
    ```
 
