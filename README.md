@@ -36,12 +36,17 @@ The app should allow users to:
    npm install
    ```
 
-3. Run the development server:
+3. build the app:
    ```bash
-   npm run dev
+   npm run build
    ```
 
-4. Open the app in your browser:
+4. Run the app:
+   ```
+   npm run preview
+   ```
+
+5. open in browser:
    ```
    http://localhost:5173
    ```

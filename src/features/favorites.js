@@ -28,6 +28,13 @@ export function handleFavoriteToggle(e) {
     btn.classList.add("favorited");
     btn.textContent = " Favorited";
   }
+  // updating ui for both buttons with the same data-key (favs and main list)
+  document.querySelectorAll(`[data-key="${bookData.key}"]`)
+  .forEach((btn) => {
+    btn.classList.toggle("favorited", !isFavorited);
+    btn.textContent = !isFavorited ? "Favorited" : "Add to Favorites";
+  });
+
   // updating the localStorage
   saveFavorites(favorites);
   // rendering favorites list every time there's a click

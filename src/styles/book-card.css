@@ -60,7 +60,7 @@
 
 .book-info .year {
   font-size: 0.85rem;
-  color: var(-- ow);
+  color: var(--shadow);
   margin-bottom: var(--gap-sm);
 }
 
