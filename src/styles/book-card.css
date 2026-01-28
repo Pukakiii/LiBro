@@ -14,12 +14,10 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .book-card:hover {
   border-color: var(--yellow);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 }
 
 .book-cover {
@@ -32,7 +30,7 @@
 .book-cover-placeholder {
   width: 100%;
   height: 250px;
-  background: linear-gradient(135deg, var(--green) 0%, var(--brown) 100%);
+  background: var(--secondary)  ;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,7 +60,7 @@
 
 .book-info .year {
   font-size: 0.85rem;
-  color: var(--shadow);
+  color: var(-- ow);
   margin-bottom: var(--gap-sm);
 }
 

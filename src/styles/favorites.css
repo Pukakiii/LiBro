@@ -4,8 +4,6 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-sm);
-  max-height: 600px;
-  overflow-y: auto;
 }
 
 .fav-book-card {
@@ -16,11 +14,9 @@
   background-color: var(--favorite);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .fav-book-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-color: var(--yellow);
 }
 

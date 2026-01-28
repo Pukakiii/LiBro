@@ -32,6 +32,14 @@ function createFavoriteBookCard(book) {
       <h3 class="fav title">${book.title}</h3>
       <p class="fav author">by ${book.author}</p>
       <p class="fav year">${book.year}</p>
+      <button class="fav-btn" 
+        data-key="${book.key}"
+        data-title="${book.title}"
+        data-author="${book.author}"
+        data-year="${book.year}"
+        data-cover="${book.coverUrl || ''}">
+        remove from Favorites
+      </button>
     </div>
   `;
 

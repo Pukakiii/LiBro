@@ -9,12 +9,11 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--gap-lg);
-  height: auto;
 }
 
 .content {
   display: grid;
-  grid-template-columns: 1fr 350px;
+  grid-template-columns: 3fr 1fr;
   gap: var(--gap-lg);
 }
 
@@ -24,12 +23,15 @@ main {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: var(--gap-lg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
-
+#results-section{
+  background-color: transparent;
+}
 #results-section h2,
 .favorites-section h2 {
   font-size: 1.5rem;
+  /* text-align: center; */
+  font-weight: 1000;
   margin-bottom: var(--gap-md);
   padding-bottom: var(--gap-sm);
   border-bottom: 2px solid var(--yellow);

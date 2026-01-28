@@ -32,7 +32,6 @@ function createBookCard(book) {
         data-year="${book.year}"
         data-cover="${book.coverUrl || ''}">
         Add to favorites
-        ${heartIcon()}
       </button>
     </div>
   `;

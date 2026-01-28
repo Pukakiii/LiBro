@@ -2,12 +2,17 @@
 
 .empty-state {
   text-align: center;
-  padding: var(--gap-lg);
+  /* padding: var(--gap-lg); */
   color: var(--text);
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  grid-column: 1 / -1;
+  
 }
-
+#empty-state-span {
+  align-self: center;
+  font-size: 2rem;
+}
 .error {
   text-align: center;
   padding: var(--gap-md);

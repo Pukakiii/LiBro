@@ -12,7 +12,7 @@ body {
 body {
   font-family: var(--sans);
   color: var(--text);
-  background-color: var(--green);
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
 }
@@ -26,10 +26,13 @@ h6 {
   margin: 0;
   color: var(--title);
   font-family: var(--serif);
+  text-align: center;
 }
 
 p {
   margin: 0;
+  line-height: 1.5;
+  
 }
 
 button {

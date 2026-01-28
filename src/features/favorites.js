@@ -26,7 +26,7 @@ export function handleFavoriteToggle(e) {
   } else {
     favorites.push(bookData);
     btn.classList.add("favorited");
-    btn.textContent = "❤️ Favorited";
+    btn.textContent = " Favorited";
   }
   // updating the localStorage
   saveFavorites(favorites);
