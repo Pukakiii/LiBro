@@ -4,6 +4,7 @@
   --green: #27694d;
   --yellow: #daa520;
   --red: #ef4444;
+  --pink: #d1478c81;
   --brown: #383129;
   --black: #2a2622;
 
@@ -31,4 +32,24 @@
   --radius-sm: 6px;
   --radius-md: 8px;
   --radius-lg: 12px;
+}
+.vivid-mode {
+  --white: #ffffff;
+  --green: #00f5d4;   
+  --yellow: #ffd166;  
+  --red: #ff006e;     
+  --pink: #d1478c81;
+  --brown: #2b0f54;   
+  --black: #0b0014;   
+
+  --title: #141354;
+  --text: #4b3b6b;
+  --border: #c7b9ff;
+
+  --background: #fdf7ff;
+  --card: #ffffff;
+  --secondary: #f1e6ff;
+  --shadow: #a88bff;
+  --favorite: #e6fffa;
+
 }

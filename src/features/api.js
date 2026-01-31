@@ -3,7 +3,7 @@ const API_BASE_URL = "https://openlibrary.org";
 
 // Search books from Open Library API
 export async function searchBooks(query) {
-  const url = `${API_BASE_URL}/search.json?title=${encodeURIComponent(query)}&limit=30`;
+  const url = `${API_BASE_URL}/search.json?title=${encodeURIComponent(query)}`;
 
   const response = await fetch(url);
 

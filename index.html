@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LiBro</title>
-    <link rel="icon" href="simple-books-catalogue/assets/book.svg" type="image/png" />
+    <link
+      rel="icon"
+      href="simple-books-catalogue/assets/book.svg"
+      type="image/png"
+    />
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
@@ -18,6 +22,7 @@
         />
       </div>
       <h2>Your library</h2>
+      <button class="theme-mode" aria-label="Toggle theme">light</button>
     </header>
     <main>
       <form id="search-form">
@@ -33,7 +38,7 @@
       <div class="content">
         <section id="results-section">
           <div id="book-list">
-            <p id="empty-state-span" class="empty-state">
+            <p id="empty-state-span" class="state empty-state">
               Enter a book title and click search to begin
             </p>
           </div>

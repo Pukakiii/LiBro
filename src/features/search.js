@@ -18,7 +18,7 @@ export async function handleSearch() {
 
     if (books.length === 0) {
       bookSection.innerHTML = `
-        <p class="empty-state">No results found for "${query}". Please try another title.</p>
+        <p class="state empty-state">No results found for "${query}". Please try another title.</p>
       `;
       return;
     }

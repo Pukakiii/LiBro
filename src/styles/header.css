@@ -8,21 +8,18 @@ header {
   justify-content: center;
   align-items: center;
   gap: var(--gap-sm);
-  height: 6.5vh;
 }
 
 header h1 {
   font-size: 1.75rem;
   font-weight: 600;
   color: var(--title);
-  padding-top: 1rem;
 }
 
 header h2 {
   font-size: 1rem;
   font-weight: 400;
   color: var(--text);
-  padding-top: 1.55rem;
 }
 
 #logo-container {
@@ -38,4 +35,31 @@ header h2 {
 #logo {
   width: 2rem;
   height: 2rem;
+}
+
+.theme-mode {
+  position: fixed;
+  top: 0rem;
+  right: var(--gap-lg);
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--brown);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+.theme-mode:hover {
+  background: linear-gradient(135deg, var(--yellow), var(--green));
+  box-shadow:
+    inset 0 0 6px rgba(255, 255, 255, 0.697),
+    0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.theme-mode:active {
+  background-color: var(--green);
+  border: none;
+}
+@media (max-width: 768px) {
+  .theme-mode {
+    right: var(--gap-md);
+  }
 }

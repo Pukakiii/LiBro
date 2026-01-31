@@ -1,4 +1,4 @@
-import { loadFavorites, saveFavorites } from "../utils.js";
+import { loadFavorites } from "../features/storage.js";
 
 const favoritesContainer = document.getElementById("favorites");
 

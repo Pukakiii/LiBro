@@ -1,5 +1,5 @@
 import { renderFavorites } from "../components/favoriteBookCard.js";
-import { saveFavorites, loadFavorites } from "../utils.js";
+import { saveFavorites, loadFavorites } from "../features/storage.js";
 
 // Handle favorite button toggle
 export function handleFavoriteToggle(e) {

@@ -8,7 +8,7 @@ function heartIcon() {
 // loading animation component
 function renderLoading() {
   return `
-  <div id="loading">
+  <div id="loading" class="state">
     <p class="loading-text">
       Searching<span class="dots"></span>
     </p>
@@ -23,16 +23,19 @@ function renderError(message) {
   `;
 }
 
-const STORAGE_KEY = "favoriteBooks";
-// save favorites to localStorage
-function saveFavorites(favorites) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
+// theme mode toggle
+function toggleThemeMode() {
+  document.body.classList.toggle("vivid-mode");
+  const themeButton = document.querySelector(".theme-mode");
+  themeButton.textContent = document.body.classList.contains("vivid-mode")
+    ? "vivid"
+    : "light";
 }
 
-// Load fav orites from localStorage
-function loadFavorites() {
-  const stored = localStorage.getItem(STORAGE_KEY);
-  return stored ? JSON.parse(stored) : [];
-}
 
-export { renderLoading, renderError, saveFavorites, loadFavorites, heartIcon };
+export {
+  renderLoading,
+  renderError,
+  heartIcon,
+  toggleThemeMode,
+};

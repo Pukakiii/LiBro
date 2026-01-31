@@ -9,14 +9,18 @@
   grid-column: 1 / -1;
   
 }
-#empty-state-span {
+.state {
   align-self: center;
   font-size: 2rem;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+  grid-column: 1 / -1;
 }
 .error {
   text-align: center;
   padding: var(--gap-md);
-  background-color: #fef2f2;
+  background-color: var(--pink);
   border-left: 3px solid var(--red);
   border-radius: var(--radius-md);
   color: var(--red);
